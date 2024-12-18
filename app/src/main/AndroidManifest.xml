@@ -13,6 +13,12 @@
         android:theme="@style/Theme.FlavourApp"
         tools:targetApi="31">
         <activity
+            android:name=".RecipeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity_recipe_detail"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
