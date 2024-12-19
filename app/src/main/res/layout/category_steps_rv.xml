@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+
+    android:layout_marginBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/shape_step">
+        <TextView
+            android:id="@+id/txtStep"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="@color/green_50"
+            android:fontFamily="@font/inter_bold"
+            android:textSize="12dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_content_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/green_900"
+        android:textSize="14dp"
+        android:text="Nấu với lửa to cho sôi, hớt bọt sạch kỹ rồi hạ nhỏ lửa đậy nắp liu riu 45 phút đến 1 tiếng là đậu chín mềm" />
+</LinearLayout>

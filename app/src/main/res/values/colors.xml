@@ -13,6 +13,8 @@
     <color name="green_600">#528729</color>
 
     <color name="brown">#3E312D</color>
+    <color name="background_dam">#F4F5F9</color>
+    <color name="background_nhat">#FFFFFF</color>
 
     <color name="linear_nhat">#ABEB68</color>
     <color name="linear_dam">#84CC16</color>
