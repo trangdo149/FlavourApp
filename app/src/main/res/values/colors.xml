@@ -28,4 +28,18 @@
     <color name="neutral_300">#BABCB5</color>
     <color name="neutral_600">#73746B</color>
     <color name="neutral_200">#D5D6D2</color>
+
+    <color name="colorIcons">#000000</color> <!-- Màu đen cho icon, bạn có thể thay đổi màu này -->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryVariant">#3700B3</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorSecondary">#03DAC5</color>
+    <color name="colorSecondaryVariant">#018786</color>
+    <color name="colorOnSecondary">#000000</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorError">#B00020</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorOnBackground">#000000</color>
+    <color name="colorOnSurface">#000000</color>
 </resources>
