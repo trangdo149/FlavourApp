@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signin">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Chào mừng trở lại"
+        android:textColor="@color/green_900"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="Hãy điền thông tin đăng nhập của bạn"
+        android:textColor="@color/neutral_500"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="24dp"
+        android:ems="10"
+        android:background="@drawable/edittext_button"
+        android:paddingLeft="12dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="50dp"
+        android:ems="10"
+        android:background="@drawable/edittext_button"
+        android:paddingLeft="12dp"
+        android:hint="Mật khẩu"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/dkbutton"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/dkbutton"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="344dp"
+        android:background="@drawable/greenbuttongradient"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Tiếp tục"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="134dp"
+        android:text="Hoặc đăng nhập với"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dkbutton" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="74dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Bạn chưa có tài khoản."
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView14"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="73dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Đăng kí"
+        android:textColor="@color/green_500"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/facebook"
+        android:layout_width="48.49dp"
+        android:layout_height="48.34dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="115dp"
+        android:background="@drawable/googlebutton"
+        android:drawableLeft="@drawable/fb_icon"
+        android:text="."
+        android:paddingRight="15dp"
+        android:paddingLeft="11.5dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/google" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/google"
+        android:layout_width="137.83dp"
+        android:layout_height="48.49dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/googlebutton"
+        android:drawableLeft="@drawable/google_icon"
+        android:drawablePadding="15dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Google"
+        android:textColor="#FF000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/apple"
+        android:layout_width="48.49dp"
+        android:layout_height="48.34dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="68dp"
+        android:text="."
+        android:paddingRight="15dp"
+        android:background="@drawable/googlebutton"
+        android:drawableLeft="@drawable/apple_icon"
+        android:paddingLeft="11.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dkbutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
