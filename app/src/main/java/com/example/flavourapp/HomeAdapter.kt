@@ -22,6 +22,9 @@ class RecipeAdapter(private val recipeList: List<Recipe>) :
     class RecipeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val recipeImage: ImageView = view.findViewById(R.id.recipeImage)
         val recipeTitle: TextView = view.findViewById(R.id.recipeTitle)
+
+        val recipeName: TextView = view.findViewById(R.id.recipeName)
+
         val recipeTime: TextView = view.findViewById(R.id.recipeTime)
         val recipeCalories: TextView = view.findViewById(R.id.recipeCalories)
     }
@@ -40,6 +43,7 @@ class RecipeAdapter(private val recipeList: List<Recipe>) :
 
         // Gán dữ liệu cho các TextView và ImageView
         holder.recipeTitle.text = recipe.name
+        holder.recipeName.text = recipe.name
         holder.recipeTime.text = recipe.time
         holder.recipeCalories.text = recipe.calories
         holder.recipeImage.setImageResource(recipe.imageResId) // Gán hình ảnh từ tài nguyên

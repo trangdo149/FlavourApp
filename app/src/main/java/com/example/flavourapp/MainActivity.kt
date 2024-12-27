@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val exploreRecyclerView = findViewById<RecyclerView>(R.id.recipeRecyclerView)
         exploreRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         exploreRecyclerView.adapter = ViewRecipe2Adapter(getExploreRecipes())  // Fix adapter
+        exploreRecyclerView.adapter = ViewRecipe2Adapter(getExploreRecipes())
 
         // Setup RecyclerView for Search Recipes (Hiển thị theo chiều ngang)
         val searchRecyclerView = findViewById<RecyclerView>(R.id.searchRecyclerView)
@@ -52,6 +53,31 @@ class MainActivity : AppCompatActivity() {
             Recipe3("Xốt Hummus", "20 Min", "120 Kcal", R.drawable.image_recipe_detail, "Beans fruits"),
             Recipe3("Xốt Hummus", "20 Min", "120 Kcal", R.drawable.image_recipe_detail, "Beans fruits"),
             Recipe3("Keto Salad", "15 Min", "150 Kcal", R.drawable.image_recipe_detail, "Fresh greens")
+        )
+    }
+}
+
+        suggestRecyclerView.adapter = RecipeAdapter(getSuggestedRecipes())
+    }
+
+    private fun getExploreRecipes(): List<RecipeImage> {
+        return listOf(
+            RecipeImage(R.drawable.card1),
+            RecipeImage(R.drawable.card1)
+        )
+    }
+
+    private fun getSearchRecipes(): List<Recipe> {
+        return listOf(
+            Recipe("Bánh mì nướng", "10 Min", "200 Kcal", R.drawable.image_recipe_detail),
+            Recipe("Salad rau củ", "15 Min", "180 Kcal", R.drawable.image_recipe_detail)
+        )
+    }
+
+    private fun getSuggestedRecipes(): List<Recipe> {
+        return listOf(
+            Recipe("Cháo yến mạch", "30 Min", "250 Kcal", R.drawable.image_recipe_detail),
+            Recipe("Gà nướng", "45 Min", "350 Kcal", R.drawable.image_recipe_detail)
         )
     }
 }
