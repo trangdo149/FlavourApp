@@ -31,14 +31,16 @@
             android:exported="false" />
         <activity
             android:name=".OnboardingActivity"
-            android:exported="true"/>
-        <activity
-            android:name=".Notification"
-            android:exported="false" />
+            android:exported="true">
         <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
 
     </application>
 

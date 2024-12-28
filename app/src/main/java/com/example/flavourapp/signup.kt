@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -19,11 +20,16 @@ class signup : AppCompatActivity() {
             insets
         }
 
-        val textViewSignIn = findViewById<TextView>(R.id.textView14)
+        val textViewSignIn = findViewById<TextView>(R.id.textViewdn)
+        val button = findViewById<AppCompatButton>(R.id.dkbutton)
 
         textViewSignIn.setOnClickListener {
-            // Chuyển sang màn hình SignInActivity
             val intent = Intent(this, signin::class.java)
+            startActivity(intent)
+        }
+
+        button.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
