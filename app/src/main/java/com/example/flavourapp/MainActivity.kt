@@ -56,28 +56,3 @@ class MainActivity : AppCompatActivity() {
         )
     }
 }
-
-        suggestRecyclerView.adapter = RecipeAdapter(getSuggestedRecipes())
-    }
-
-    private fun getExploreRecipes(): List<RecipeImage> {
-        return listOf(
-            RecipeImage(R.drawable.card1),
-            RecipeImage(R.drawable.card1)
-        )
-    }
-
-    private fun getSearchRecipes(): List<Recipe> {
-        return listOf(
-            Recipe("Bánh mì nướng", "10 Min", "200 Kcal", R.drawable.image_recipe_detail),
-            Recipe("Salad rau củ", "15 Min", "180 Kcal", R.drawable.image_recipe_detail)
-        )
-    }
-
-    private fun getSuggestedRecipes(): List<Recipe> {
-        return listOf(
-            Recipe("Cháo yến mạch", "30 Min", "250 Kcal", R.drawable.image_recipe_detail),
-            Recipe("Gà nướng", "45 Min", "350 Kcal", R.drawable.image_recipe_detail)
-        )
-    }
-}
