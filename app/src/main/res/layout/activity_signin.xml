@@ -123,13 +123,13 @@
         android:id="@+id/facebook"
         android:layout_width="48.49dp"
         android:layout_height="48.34dp"
-        android:layout_marginStart="14dp"
+        android:layout_marginStart="12dp"
         android:layout_marginBottom="115dp"
         android:background="@drawable/googlebutton"
         android:drawableLeft="@drawable/fb_icon"
-        android:text="."
-        android:paddingRight="15dp"
         android:paddingLeft="11.5dp"
+        android:paddingRight="15dp"
+        android:text="."
         app:layout_constraintBottom_toTopOf="@+id/textView14"
         app:layout_constraintStart_toEndOf="@+id/google" />
 
