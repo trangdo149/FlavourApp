@@ -1,0 +1,92 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Image -->
+        <ImageView
+            android:id="@+id/recipeImage3"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_recipe_detail" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/recipeTitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Keto Salad"
+            android:textColor="#2E7D32"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/recipeSubtitle3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Beans fruits"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <!-- Calories -->
+            <ImageView
+                android:id="@+id/caloriesIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/calories" />
+
+            <TextView
+                android:id="@+id/recipeCalories3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="120 Kcal"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+
+            <!-- Divider -->
+            <TextView
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:text="•"
+                android:textColor="#666666" />
+
+            <!-- Time -->
+            <ImageView
+                android:id="@+id/timeIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/timecircle" />
+
+            <TextView
+                android:id="@+id/recipeTime3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20 Min"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#4CAF50" /> <!-- Màu xanh lá, bạn có thể thay đổi -->
+        <size android:width="8dp" android:height="8dp" /> <!-- Kích thước hình tròn -->
+        <corners android:radius="4dp" /> <!-- Bán kính tạo thành hình tròn -->
+    </shape>
+
+</selector>

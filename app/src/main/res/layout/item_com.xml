@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@color/white">
+
+    <!-- Header (Avatar + Name + Time + Options) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/avatarImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên người dùng"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/posttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5 phút trước"
+                android:textSize="12sp"
+                android:textColor="#000" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Nội dung bài viết -->
+    <TextView
+        android:id="@+id/postContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nội dung bài viết"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Hình ảnh bài viết -->
+    <ImageView
+        android:id="@+id/postImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/cutlery4" />
+
+    <!-- Like, Comment, Share -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/likeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/heart"
+            android:drawablePadding="4dp"
+            android:text="1,2K"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/commentCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/post"
+            android:drawablePadding="4dp"
+            android:text="137"
+            android:textSize="14sp"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:id="@+id/shareCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/topnav"
+            android:drawablePadding="4dp"
+            android:text="32"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
