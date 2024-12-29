@@ -13,14 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:padding="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom_navigation">
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:gravity="center_horizontal"> <!-- Căn giữa nội dung -->
+            android:paddingBottom="80dp">
 
             <!-- Các thành phần bên trong ScrollView -->
             <TextView
@@ -34,14 +37,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
             <ImageView
                 android:id="@+id/profileImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/avatar"
                 android:contentDescription="Ảnh đại diện"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar" />
 
             <TextView
                 android:id="@+id/userName"
@@ -63,18 +67,18 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginEnd="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txtFollowedCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
+                        android:textColor="@color/green_600"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/green_600"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txtFollowedLabel"
@@ -88,18 +92,18 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:layout_marginEnd="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txtFollowerCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="12345"
+                        android:textColor="@color/green_600"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/green_600"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txtFollowerLabel"
@@ -113,17 +117,17 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/txtLikesCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1.02Tr"
+                        android:textColor="@color/green_600"
                         android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/green_600"/>
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txtLikesLabel"
@@ -140,13 +144,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Chỉnh sửa trang cá nhân"
-                app:layout_constraintTop_toBottomOf="@id/statistics"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:textColor="@color/black"
                 android:background="@drawable/edit_profile"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:text="Chỉnh sửa trang cá nhân"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statistics" />
 
             <TextView
                 android:id="@+id/status"
@@ -154,73 +158,82 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Tôi ghét ăn tối bằng thức ăn đóng hộp"
-                app:layout_constraintTop_toBottomOf="@id/editProfileButton"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/editProfileButton" />
 
             <!-- Text sở trường -->
             <TextView
                 android:id="@+id/specialtiesLabel"
-                android:layout_gravity="start"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="start"
                 android:layout_marginTop="16dp"
                 android:text="Sở trường nấu ăn:"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintTop_toBottomOf="@id/status"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/status" />
 
             <!-- ChipGroup -->
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chipGroup"
+<!--            <com.google.android.material.chip.ChipGroup-->
+<!--                android:id="@+id/chipGroup"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                app:chipSpacingHorizontal="8dp"-->
+<!--                app:chipSpacingVertical="0dp"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/specialtiesLabel"-->
+<!--                app:singleLine="false">-->
+
+<!--                &lt;!&ndash; Chips &ndash;&gt;-->
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Kẹo Caramel"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Cá hồi"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Bánh su kem"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Panna cotta"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Tiramisu"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+
+<!--                <com.google.android.material.chip.Chip-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Bánh croissant"-->
+<!--                    app:chipCornerRadius="18dp" />-->
+<!--            </com.google.android.material.chip.ChipGroup>-->
+
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                app:chipSpacingHorizontal="8dp"
-                app:chipSpacingVertical="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/specialtiesLabel"
-                app:singleLine="false">
-
-                <!-- Chips -->
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kẹo Caramel"
-                    app:chipCornerRadius="18dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cá hồi"
-                    app:chipCornerRadius="18dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bánh su kem"
-                    app:chipCornerRadius="18dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Panna cotta"
-                    app:chipCornerRadius="18dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tiramisu"
-                    app:chipCornerRadius="18dp" />
-
-                <com.google.android.material.chip.Chip
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bánh croissant"
-                    app:chipCornerRadius="18dp" />
-            </com.google.android.material.chip.ChipGroup>
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                android:id="@+id/chipGroup"
+                tools:listitem="@layout/item_favourite"
+                android:layout_gravity="center"
+                />
 
             <View
                 android:id="@+id/line1"
@@ -236,9 +249,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@id/line1"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/line1" />
         </LinearLayout>
     </ScrollView>
 
@@ -251,7 +264,6 @@
         app:itemIconTint="@color/colorIcons"
         app:itemTextColor="@color/colorIcons"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

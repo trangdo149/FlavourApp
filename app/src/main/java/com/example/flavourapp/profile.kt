@@ -1,5 +1,7 @@
 package com.example.flavourapp
 
+import android.content.Intent
+import android.graphics.Rect
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +11,7 @@ import android.widget.TextView
 import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import android.content.Intent
 
 
 class ProfileActivity : ComponentActivity() {
@@ -26,7 +25,7 @@ class ProfileActivity : ComponentActivity() {
 
         // Set up the profile image
         val profileImageView = findViewById<ImageView>(R.id.profileImage)
-        profileImageView.setImageResource(R.drawable.avatar) // Thay 'avatar' bằng tài nguyên của bạn
+        profileImageView.setImageResource(R.drawable.avatar)
 
         // Set up the user name and other text views
         val userNameTextView = findViewById<TextView>(R.id.userName)
@@ -36,27 +35,26 @@ class ProfileActivity : ComponentActivity() {
         statusTextView.text = "Tôi ghét ăn tối bằng thức ăn đóng hộp"
 
         // Set up button
-        // Tìm nút Chỉnh sửa trong giao diện
+
         val editProfileButton = findViewById<View>(R.id.editProfileButton)
 
-        // Gắn sự kiện OnClickListener
         editProfileButton.setOnClickListener {
             try {
                 val intent = Intent(this, EditProfileActivity::class.java)
                 startActivity(intent)
             } catch (e: Exception) {
-                e.printStackTrace() // Ghi lại lỗi (nếu có)
+                e.printStackTrace()
             }
         }
 
 
         // Set up ChipGroup with specialties
-        val chipGroup = findViewById<ChipGroup>(R.id.chipGroup)
+        val chipGroup = findViewById<RecyclerView>(R.id.chipGroup)
 
 
         // Set up RecyclerView
         val recipeRecyclerView = findViewById<RecyclerView>(R.id.recipeRecyclerView)
-        // Sử dụng GridLayoutManager để xếp thẻ thành lưới với 2 cột
+
         recipeRecyclerView.layoutManager = GridLayoutManager(this, 2)
 
         // Sample data for recipes
@@ -67,20 +65,50 @@ class ProfileActivity : ComponentActivity() {
             Recipe("Bánh Tiramisu", "200 Kcal", "50 Min", "Sophia Tran", R.drawable.image_recipe_detail, R.drawable.avatar)
         )
 
+        val favouriteList = listOf(
+            FavouriteItem("Kẹo Caramel"),
+            FavouriteItem("Cá Hồi"),
+            FavouriteItem("Bánh su kem"),
+            FavouriteItem("Panna cotta"),
+            FavouriteItem("Tiramisu"),
+            FavouriteItem("Bánh Croisant"),
+            FavouriteItem("Hí hí")
+        )
+
         // Set up adapter
         val adapter = RecipeAdapter(recipeList)
         recipeRecyclerView.adapter = adapter
 
+        val favorAdapter = FavouriteAdapter(favouriteList)
+
+        val favorRecycleView = findViewById<RecyclerView>(R.id.chipGroup)
+        favorRecycleView.adapter = favorAdapter
+        val gridLayoutManager = GridLayoutManager(this, 3)
+        favorRecycleView.layoutManager = gridLayoutManager
+
+        val spacing = 8
+        favorRecycleView.addItemDecoration(object : RecyclerView.ItemDecoration() {
+            override fun getItemOffsets(
+                outRect: Rect,
+                view: View,
+                parent: RecyclerView,
+                state: RecyclerView.State
+            ) {
+                outRect.set(spacing, spacing, spacing, spacing)
+            }
+        })
+
         // Set up Bottom Navigation
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.setSelectedItemId(R.id.nav_profile);
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    // Handle Home navigation
+
                     true
                 }
                 R.id.profile -> {
-                    // Handle Profile navigation
+
                     true
                 }
                 else -> false
