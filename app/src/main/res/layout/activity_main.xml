@@ -113,7 +113,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchTitle" />
-                app:layout_constraintTop_toBottomOf="@id/searchTitle" />
 
             <TextView
                 android:id="@+id/suggestTitle"
@@ -170,10 +169,5 @@
         app:labelVisibilityMode="labeled"
         app:itemBackground="@android:color/transparent"
         app:itemIconSize="24dp" /> <!-- Đặt kích thước cố định cho icon -->
-        android:background="?android:attr/windowBackground"
-        app:itemIconTint="@color/colorIcons"
-        app:itemTextColor="@color/colorIcons"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
