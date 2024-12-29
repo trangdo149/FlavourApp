@@ -17,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         exploreRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         exploreRecyclerView.adapter = ViewRecipe2Adapter(getExploreRecipes())  // Fix adapter
 
+
+        exploreRecyclerView.adapter = ViewRecipe2Adapter(getExploreRecipes())
+
         // Setup RecyclerView for Search Recipes (Hiển thị theo chiều ngang)
         val searchRecyclerView = findViewById<RecyclerView>(R.id.searchRecyclerView)
         searchRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)

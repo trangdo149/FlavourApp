@@ -15,27 +15,59 @@
 
         <!-- MainActivity (Launch Activity) -->
         <activity
+
             android:name=".Community"
-            android:exported="true">
+
+            android:name=".ProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FlavourApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!-- Notification Activity -->
         <activity
-            android:name=".Notification"
-            android:exported="true" />
-        <!-- Community Activity -->
+            android:name=".EditProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.FlavourApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".signup"
+            android:exported="false" />
+        <activity
+            android:name=".signin"
+            android:exported="false" />
+        <activity
+            android:name=".start"
+            android:exported="false" />
+        <activity
+            android:name=".RecipeDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnboardingActivity"
+            android:exported="true">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- RecipeDetailActivity -->
         <activity
-            android:name=".RecipeDetailActivity"
-            android:exported="true" />
+            android:name=".Notification"
+            android:exported="false" />
 
     </application>
 
