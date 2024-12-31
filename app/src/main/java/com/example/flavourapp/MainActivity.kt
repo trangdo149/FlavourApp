@@ -57,4 +57,5 @@ class MainActivity : AppCompatActivity() {
             Recipe3("Keto Salad", "15 Min", "150 Kcal", R.drawable.image_recipe_detail, "Fresh greens")
         )
     }
+    // testttttt
 }
