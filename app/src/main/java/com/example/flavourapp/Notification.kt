@@ -1,20 +1,20 @@
-package com.example.flavourapp
-
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.flavourapp.R
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.flavourapp.NotificationAdapter
-
-// Import NotificationItem nếu nằm trong package khác
 import com.example.flavourapp.NotificationItem
+import com.example.flavourapp.SpaceItemDecoration
+import com.example.flavourapp.databinding.ActivityNotificationBinding // Import lớp binding
 
 class Notification : AppCompatActivity() {
+    private lateinit var binding: ActivityNotificationBinding // Khai báo binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notification)
+
+        // Inflate layout với View Binding
+        binding = ActivityNotificationBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Dữ liệu tĩnh
         val notifications = listOf(
@@ -23,10 +23,9 @@ class Notification : AppCompatActivity() {
             NotificationItem("Châu Bùi", "Đã thích bài viết của bạn", "15 phút trước")
         )
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.addItemDecoration(SpaceItemDecoration(8)) // Khoảng cách 10dp
-
-        recyclerView.adapter = NotificationAdapter(notifications) // Truyền danh sách vào Adapter
+        // Thiết lập RecyclerView với View Binding
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.addItemDecoration(SpaceItemDecoration(8))
+        binding.recyclerView.adapter = NotificationAdapter(notifications)
     }
 }
