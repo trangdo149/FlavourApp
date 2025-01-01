@@ -1,4 +1,4 @@
-import MainActivity
+package com.example.flavourapp
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -26,7 +26,7 @@ class OnboardingActivity : AppCompatActivity() {
         }
         // Xử lý sự kiện nhấn vào nút
         binding.button.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, start::class.java)
             startActivity(intent)
         }
     }

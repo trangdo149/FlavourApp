@@ -1,3 +1,4 @@
+package com.example.flavourapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import com.example.flavourapp.databinding.ActivityEditProfileBinding // Import lớp binding

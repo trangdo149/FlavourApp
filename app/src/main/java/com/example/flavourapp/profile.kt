@@ -1,6 +1,5 @@
 package com.example.flavourapp
 
-import EditProfileActivity
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle

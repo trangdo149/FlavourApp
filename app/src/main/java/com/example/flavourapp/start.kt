@@ -1,3 +1,4 @@
+package com.example.flavourapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.flavourapp.databinding.ActivityStartBinding // Import lớp binding
-import com.example.flavourapp.signup
 
 class start : AppCompatActivity() {
     private lateinit var binding: ActivityStartBinding // Khai báo binding
@@ -29,13 +29,13 @@ class start : AppCompatActivity() {
 
         // Sự kiện cho nút "Tạo tài khoản"
         binding.dkbutton.setOnClickListener {
-            val intent = Intent(this, signup::class.java)
+            val intent = Intent(this, Signup::class.java)
             startActivity(intent)
         }
 
         // Sự kiện cho nút "Đăng nhập"
         binding.signinbutton.setOnClickListener {
-            val intent = Intent(this, signin::class.java)
+            val intent = Intent(this, Signin::class.java)
             startActivity(intent)
         }
     }
