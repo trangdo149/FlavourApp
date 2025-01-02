@@ -5,6 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import com.example.flavourapp.R
+import com.example.flavourapp.danhmuctimkiem.DanhMuc
+import com.example.flavourapp.danhmuctimkiem.DanhMucAdapter
 import com.example.flavourapp.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -13,6 +17,23 @@ class SearchFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        initView()
         return binding.root
     }
+
+    private fun initView() {
+        binding.rvDanhMuc.layoutManager = GridLayoutManager(requireContext(), 2)
+        val danhMucList = listOf(
+            DanhMuc("Món cuốn", R.drawable.moncuon),
+            DanhMuc("Món nộm", R.drawable.moncuon),
+            DanhMuc("Món trộn", R.drawable.moncuon),
+            DanhMuc("Món kho", R.drawable.moncuon),
+            DanhMuc("Món nước", R.drawable.moncuon),
+            DanhMuc("Món xào", R.drawable.moncuon)
+        )
+        val adapter = DanhMucAdapter(requireContext(), danhMucList)
+        binding.rvDanhMuc.adapter = adapter
+    }
+
+
 }

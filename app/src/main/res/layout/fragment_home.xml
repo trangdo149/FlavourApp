@@ -41,7 +41,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -94,12 +96,12 @@
                 android:layout_marginEnd="20dp"
                 android:paddingTop="20dp"
                 android:text="Xem thêm"
+                android:textColor="#65A30D"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="#65A30D"
+                app:layout_constraintBottom_toBottomOf="@id/searchTitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/searchTitle"
-                app:layout_constraintBottom_toBottomOf="@id/searchTitle" />
+                app:layout_constraintTop_toTopOf="@id/searchTitle" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/searchRecyclerView"
@@ -132,12 +134,12 @@
                 android:layout_marginEnd="20dp"
                 android:paddingTop="20dp"
                 android:text="Xem thêm"
+                android:textColor="#65A30D"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                android:textColor="#65A30D"
+                app:layout_constraintBottom_toBottomOf="@id/suggestTitle"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/suggestTitle"
-                app:layout_constraintBottom_toBottomOf="@id/suggestTitle" />
+                app:layout_constraintTop_toTopOf="@id/suggestTitle" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/suggestRecyclerView"
@@ -145,10 +147,10 @@
                 android:layout_height="220dp"
                 android:layout_marginTop="8dp"
                 android:padding="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/suggestTitle"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/suggestTitle" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
