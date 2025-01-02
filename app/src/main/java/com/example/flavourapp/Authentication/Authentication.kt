@@ -2,6 +2,7 @@ package com.example.flavourapp.Authentication
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flavourapp.MainActivity
@@ -47,6 +48,7 @@ open class Authentication: AppCompatActivity(){
                 firebaseAuthWithGoogle(account.idToken!!)
             } catch (e: ApiException) {
                 Toast.makeText(this, "Google sign in failed: ${e.message}", Toast.LENGTH_SHORT).show()
+                Log.e("GoogleSignInError", "Google sign in failed: ${e.message}")
             }
         }
     }
