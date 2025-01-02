@@ -47,10 +47,21 @@ class MainActivity : BaseActivity() {
                 selectBottomNavBar(position)
             }
         })
-
         binding.vpHome.currentItem = 0
-        binding.vpHome.isUserInputEnabled = false
+        binding.vpHome.isUserInputEnabled = true
 
+        binding.btnHome.setOnClickListener {
+            binding.vpHome.currentItem = 0
+        }
+        binding.btnSearch.setOnClickListener {
+            binding.vpHome.currentItem = 1
+        }
+        binding.btnCommunity.setOnClickListener {
+            binding.vpHome.currentItem = 2
+        }
+        binding.btnProfile.setOnClickListener {
+            binding.vpHome.currentItem = 3
+        }
     }
 
 
@@ -61,32 +72,32 @@ class MainActivity : BaseActivity() {
                 binding.icHome.setImageResource(R.drawable.ic_home_selected)
                 binding.icSearch.setImageResource(R.drawable.ic_search)
                 binding.icCommunity.setImageResource(R.drawable.icon)
-                binding.icCommunity.setImageResource(R.drawable.ic_profile)
+                binding.icProfile.setImageResource(R.drawable.ic_profile)
             }
             1 -> {
                 binding.icHome.setImageResource(R.drawable.ic_home)
                 binding.icSearch.setImageResource(R.drawable.ic_search_selected)
                 binding.icCommunity.setImageResource(R.drawable.icon)
-                binding.icCommunity.setImageResource(R.drawable.ic_profile)
+                binding.icProfile.setImageResource(R.drawable.ic_profile)
             }
             2 -> {
                 binding.icHome.setImageResource(R.drawable.ic_home)
                 binding.icSearch.setImageResource(R.drawable.ic_search)
                 binding.icCommunity.setImageResource(R.drawable.ic_community_selected)
-                binding.icCommunity.setImageResource(R.drawable.ic_profile)
+                binding.icProfile.setImageResource(R.drawable.ic_profile)
             }
             3 -> {
                 binding.icHome.setImageResource(R.drawable.ic_home)
                 binding.icSearch.setImageResource(R.drawable.ic_search)
                 binding.icCommunity.setImageResource(R.drawable.icon)
-                binding.icCommunity.setImageResource(R.drawable.ic_profile_selected)
+                binding.icProfile.setImageResource(R.drawable.ic_profile_selected)
             }
 
         }
     }
     inner class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
         FragmentStateAdapter(fragmentActivity) {
-        override fun getItemCount(): Int = 3
+        override fun getItemCount(): Int = 4
 
         override fun createFragment(position: Int): Fragment {
             return when (position) {
