@@ -1,21 +1,46 @@
 package com.example.flavourapp
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import com.example.flavourapp.databinding.ActivityEditProfileBinding // Import lớp binding
+import com.bumptech.glide.Glide
+import com.example.flavourapp.base.BaseActivity
+import com.example.flavourapp.databinding.ActivityEditProfileBinding
+import com.google.firebase.auth.FirebaseAuth
 
-class EditProfileActivity : ComponentActivity() {
-    private lateinit var binding: ActivityEditProfileBinding // Khai báo binding
+class EditProfileActivity : BaseActivity() {
+    private lateinit var binding: ActivityEditProfileBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inflate layout với View Binding
+
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Sử dụng binding để gắn sự kiện
         binding.backButton.setOnClickListener {
-            finish() // Quay lại màn hình trước
+            finish()
+        }
+        val user = FirebaseAuth.getInstance().currentUser
+        user?.let {
+            binding.userEmail.text = it.email
+
+            val userName = it.displayName
+            binding.userName.text = userName ?: "No name"
+
+            val photoUrl = it.photoUrl
+            photoUrl?.let { url ->
+                Glide.with(this)
+                    .load(url)
+                    .into(binding.userImage)
+            } ?: run {
+                binding.userImage.setImageResource(R.drawable.avatar2)
+            }
+        }
+
+        binding.logoutBtn.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            val intent = Intent(this, start::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

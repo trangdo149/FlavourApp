@@ -27,6 +27,10 @@ class Notification : AppCompatActivity() {
         // Thiết lập RecyclerView với View Binding
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.addItemDecoration(SpaceItemDecoration(8))
+
         binding.recyclerView.adapter = NotificationAdapter(notifications)
+        binding.iconBack.setOnClickListener {
+            finish()
+        }
     }
 }
