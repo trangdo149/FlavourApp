@@ -23,22 +23,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-//        // Setup RecyclerView for Explore Recipes
-//        binding.recipeRecyclerView.layoutManager =
-//            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        binding.recipeRecyclerView.adapter = ViewRecipe2Adapter(getExploreRecipes())
-//
-//        // Setup RecyclerView for Search Recipes
-//        binding.searchRecyclerView.layoutManager =
-//            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        binding.searchRecyclerView.adapter = RecipeAdapter(getSearchRecipes())
-//
-//        // Setup RecyclerView for Suggested Recipes
-//        binding.suggestRecyclerView.layoutManager =
-//            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-//        binding.suggestRecyclerView.adapter = ViewRecipe3Adapter(getSuggestedRecipes())
-//
-
 
         binding.vpHome.adapter = ViewPagerAdapter(this)
         binding.vpHome.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
