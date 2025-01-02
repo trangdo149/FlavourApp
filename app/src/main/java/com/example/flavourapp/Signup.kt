@@ -25,7 +25,7 @@ class Signup : Authentication() {
         }
 
         binding.google.setOnClickListener {
-            signIn() 
+            signIn()
         }
     }
 }
