@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat.startActivityForResult
+import androidx.core.content.ContextCompat.startActivity
 import com.example.flavourapp.MainActivity
 import com.example.flavourapp.R
+import com.example.flavourapp.base.BaseActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 
-open class Authentication: AppCompatActivity(){
+open class Authentication: BaseActivity(){
     protected lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {

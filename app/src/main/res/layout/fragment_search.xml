@@ -10,11 +10,11 @@
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editTextSearch"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/searchview"
         android:drawableStart="@drawable/search_normal"
@@ -22,13 +22,11 @@
         android:focusable="true"
         android:hint="  Tìm kiếm "
         android:inputType="textFilter"
-
-
         android:paddingStart="15dp"
         android:textColorHint="#D5D6D2"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,13 +41,14 @@
         android:text="Lịch sử"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearch"
         tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="409dp"
+        android:id="@+id/recyclerViewHis"
+        android:layout_width="match_parent"
         android:layout_height="145dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,9 +64,10 @@
         android:gravity="center"
         android:text="Xem thêm"
         android:textColor="@color/green_500"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="173dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewHis"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView7"
