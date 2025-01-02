@@ -22,17 +22,15 @@ class SearchFragment : Fragment() {
     }
 
     private fun initView() {
-        binding.rvDanhMuc.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding.rvDanhmuc.layoutManager = GridLayoutManager(requireContext(), 2)
         val danhMucList = listOf(
             DanhMuc("Món cuốn", R.drawable.moncuon),
-            DanhMuc("Món nộm", R.drawable.moncuon),
             DanhMuc("Món trộn", R.drawable.moncuon),
-            DanhMuc("Món kho", R.drawable.moncuon),
             DanhMuc("Món nước", R.drawable.moncuon),
             DanhMuc("Món xào", R.drawable.moncuon)
         )
         val adapter = DanhMucAdapter(requireContext(), danhMucList)
-        binding.rvDanhMuc.adapter = adapter
+        binding.rvDanhmuc.adapter = adapter
     }
 
 
