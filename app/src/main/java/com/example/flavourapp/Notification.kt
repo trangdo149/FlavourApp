@@ -5,9 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.flavourapp.NotificationAdapter
 import com.example.flavourapp.NotificationItem
 import com.example.flavourapp.SpaceItemDecoration
+import com.example.flavourapp.base.BaseActivity
 import com.example.flavourapp.databinding.ActivityNotificationBinding // Import lớp binding
 
-class Notification : AppCompatActivity() {
+class Notification : BaseActivity() {
     private lateinit var binding: ActivityNotificationBinding // Khai báo binding
 
     override fun onCreate(savedInstanceState: Bundle?) {

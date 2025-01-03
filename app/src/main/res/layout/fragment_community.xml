@@ -59,6 +59,7 @@
             android:layout_height="wrap_content"
             android:minHeight="24dp"
             android:hint="Bạn muốn chia sẻ?"
+            android:layout_marginStart="20dp"
             android:background="@drawable/search_bar_border"
             android:paddingStart="12dp"
             android:paddingEnd="8dp"
@@ -69,9 +70,8 @@
 
     </LinearLayout>
 
-    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/recyclerViewPost"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="8dp"
