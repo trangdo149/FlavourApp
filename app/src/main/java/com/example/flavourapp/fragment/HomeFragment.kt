@@ -1,11 +1,13 @@
 package com.example.flavourapp.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.flavourapp.Notification
 import com.example.flavourapp.R
 import com.example.flavourapp.Recipe
 import com.example.flavourapp.Recipe3
@@ -36,12 +38,22 @@ class HomeFragment : Fragment() {
         // Setup RecyclerView for Search Recipes
         binding.searchRecyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.searchRecyclerView.adapter = RecipeAdapter(getSearchRecipes())
+        binding.searchRecyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        binding.searchRecyclerView.adapter = RecipeAdapter(getSearchRecipes()) {
+
+            val intent = Intent(requireContext(), Notification::class.java)
+            startActivity(intent)
+        }
+
 
         // Setup RecyclerView for Suggested Recipes
         binding.suggestRecyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        binding.suggestRecyclerView.adapter = ViewRecipe3Adapter(getSuggestedRecipes())
+        binding.suggestRecyclerView.adapter = ViewRecipe3Adapter(getSuggestedRecipes()){
+            val intent = Intent(requireContext(), Notification::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun getExploreRecipes(): List<RecipeImage> {

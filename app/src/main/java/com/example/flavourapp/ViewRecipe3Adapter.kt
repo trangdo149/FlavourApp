@@ -17,7 +17,10 @@ data class Recipe3(
     val subtitle3: String
 )
 
-class ViewRecipe3Adapter(private val recipeList: List<Recipe3>) :
+class ViewRecipe3Adapter(
+    private val recipeList: List<Recipe3>,
+    private val onItemClick: (Recipe3) -> Unit
+) :
     RecyclerView.Adapter<ViewRecipe3Adapter.RecipeViewHolder>() {
 
     class RecipeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -36,12 +39,16 @@ class ViewRecipe3Adapter(private val recipeList: List<Recipe3>) :
 
     override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipeList[position]
-        Log.d("Recipe", "Binding data for: ${recipe.time3}")  // In ra dữ liệu mỗi khi bind
+        Log.d("Recipe", "Binding data for: ${recipe.time3}")
         holder.recipeImage3.setImageResource(recipe.imageResId3)
         holder.recipeTitle3.text = recipe.name3
         holder.recipeSubtitle3.text = recipe.subtitle3
         holder.recipeCalories3.text = recipe.calories3
         holder.recipeTime3.text = recipe.time3
+        holder.itemView.setOnClickListener {
+            onItemClick(recipe)
+        }
+
     }
 
     override fun getItemCount() = recipeList.size
