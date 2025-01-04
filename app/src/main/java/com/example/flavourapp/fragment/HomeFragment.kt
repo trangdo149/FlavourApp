@@ -12,6 +12,7 @@ import com.example.flavourapp.R
 import com.example.flavourapp.Recipe
 import com.example.flavourapp.Recipe3
 import com.example.flavourapp.RecipeAdapter
+import com.example.flavourapp.RecipeDetailActivity
 import com.example.flavourapp.RecipeImage
 import com.example.flavourapp.ViewRecipe2Adapter
 import com.example.flavourapp.ViewRecipe3Adapter
@@ -42,7 +43,7 @@ class HomeFragment : Fragment() {
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.searchRecyclerView.adapter = RecipeAdapter(getSearchRecipes()) {
 
-            val intent = Intent(requireContext(), Notification::class.java)
+            val intent = Intent(requireContext(), RecipeDetailActivity::class.java)
             startActivity(intent)
         }
 
@@ -51,7 +52,7 @@ class HomeFragment : Fragment() {
         binding.suggestRecyclerView.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         binding.suggestRecyclerView.adapter = ViewRecipe3Adapter(getSuggestedRecipes()){
-            val intent = Intent(requireContext(), Notification::class.java)
+            val intent = Intent(requireContext(), RecipeDetailActivity::class.java)
             startActivity(intent)
         }
     }
