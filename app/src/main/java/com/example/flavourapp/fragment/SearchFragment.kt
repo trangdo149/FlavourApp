@@ -14,6 +14,7 @@ import com.example.flavourapp.adapter.SearchHistoryAdapter
 import com.example.flavourapp.danhmuctimkiem.DanhMuc
 import com.example.flavourapp.danhmuctimkiem.DanhMucAdapter
 import com.example.flavourapp.databinding.FragmentSearchBinding
+import com.example.flavourapp.dish.DishCategory
 
 class SearchFragment : Fragment() {
     private val binding by lazy { FragmentSearchBinding.inflate(layoutInflater) }
@@ -33,10 +34,10 @@ class SearchFragment : Fragment() {
     private fun initView() {
         binding.rvDanhmuc.layoutManager = GridLayoutManager(requireContext(), 2)
         val danhMucList = listOf(
-            DanhMuc("Món cuốn", R.drawable.moncuon),
-            DanhMuc("Món trộn", R.drawable.montron),
-            DanhMuc("Món nước", R.drawable.monnuoc),
-            DanhMuc("Món xào", R.drawable.xao)
+            DanhMuc("Món cuốn", R.drawable.moncuon, DishCategory.MON_CUON),
+            DanhMuc("Món trộn", R.drawable.montron, DishCategory.MON_TRON),
+            DanhMuc("Món nước", R.drawable.monnuoc, DishCategory.MON_NUOC),
+            DanhMuc("Món xào", R.drawable.xao, DishCategory.MON_XAO)
         )
         val adapter = DanhMucAdapter(requireContext(), danhMucList)
         binding.rvDanhmuc.adapter = adapter

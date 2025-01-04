@@ -1,9 +1,10 @@
 package com.example.flavourapp.danhmuctimkiem
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.flavourapp.activity.Search2
 import com.example.flavourapp.databinding.ItemCategoryDanhmucBinding
 
 class DanhMucAdapter(
@@ -21,11 +22,14 @@ class DanhMucAdapter(
         holder.binding.categoryTitle.text = danhMuc.ten
         holder.binding.categoryImage.setImageResource(danhMuc.hinhAnhResId)
         holder.binding.root.setOnClickListener {
-            Toast.makeText(context, "Updating: ${danhMuc.ten}", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, Search2::class.java)
+            intent.putExtra("CATEGORY_NAME", danhMuc.category.name)
+            context.startActivity(intent)
         }
     }
 
     override fun getItemCount(): Int = danhMucList.size
 
     class DanhMucViewHolder(val binding: ItemCategoryDanhmucBinding) : RecyclerView.ViewHolder(binding.root)
+
 }
