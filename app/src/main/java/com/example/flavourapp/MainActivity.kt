@@ -32,7 +32,7 @@ class MainActivity : BaseActivity() {
             }
         })
         binding.vpHome.currentItem = 0
-        binding.vpHome.isUserInputEnabled = true
+        binding.vpHome.isUserInputEnabled = false
 
         binding.btnHome.setOnClickListener {
             binding.vpHome.currentItem = 0

@@ -34,9 +34,9 @@ class SearchFragment : Fragment() {
         binding.rvDanhmuc.layoutManager = GridLayoutManager(requireContext(), 2)
         val danhMucList = listOf(
             DanhMuc("Món cuốn", R.drawable.moncuon),
-            DanhMuc("Món trộn", R.drawable.moncuon),
-            DanhMuc("Món nước", R.drawable.moncuon),
-            DanhMuc("Món xào", R.drawable.moncuon)
+            DanhMuc("Món trộn", R.drawable.montron),
+            DanhMuc("Món nước", R.drawable.monnuoc),
+            DanhMuc("Món xào", R.drawable.xao)
         )
         val adapter = DanhMucAdapter(requireContext(), danhMucList)
         binding.rvDanhmuc.adapter = adapter
