@@ -75,7 +75,7 @@ class HomeFragment : Fragment() {
     private fun getSuggestedRecipes(): List<Recipe3> {
         return listOf(
             Recipe3("Xốt Hummus", "20 Min", "120 Kcal", R.drawable.image_recipe_detail, "Beans fruits"),
-            Recipe3("Xốt Hummus", "20 Min", "120 Kcal", R.drawable.image_recipe_detail, "Beans fruits"),
+            Recipe3("Nem", "20 Min", "120 Kcal", R.drawable.image_recipe_detail, "Beans fruits"),
             Recipe3("Keto Salad", "15 Min", "150 Kcal", R.drawable.image_recipe_detail, "Fresh greens")
         )
     }

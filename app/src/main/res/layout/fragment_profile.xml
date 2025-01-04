@@ -178,12 +178,12 @@
                 app:layout_constraintTop_toBottomOf="@id/status" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:id="@+id/chipGroup"
-                tools:listitem="@layout/item_favourite"
-                android:layout_gravity="center" />
+                android:layout_width="373dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                tools:listitem="@layout/item_favourite" />
 
             <View
                 android:id="@+id/line1"
