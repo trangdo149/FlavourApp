@@ -13,9 +13,16 @@
         android:theme="@style/Theme.FlavourApp"
         tools:targetApi="31">
 
-        <!-- MainActivity (Launch Activity) -->
         <activity
-
+            android:name=".Community"
+            android:exported="false"/>
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"/>
+        <activity
             android:name=".signup"
             android:exported="false" />
         <activity
@@ -31,27 +38,16 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".OnboardingActivity"
-
-            android:name=".MainActivity"
-
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <!-- Notification Activity -->
-        <activity
             android:name=".Notification"
-            android:exported="true" />
-
-        <!-- RecipeDetailActivity -->
+            android:exported="false" />
         <activity
-            android:name=".RecipeDetailActivity"
-            android:exported="true" />
+            android:name=".OnboardingActivity"
+            android:exported="true">
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
 
     </application>
 

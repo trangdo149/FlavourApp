@@ -3,20 +3,20 @@
     <item
         android:id="@+id/nav_home"
         android:icon="@drawable/cutlery4"
-    android:title="" />
+        android:title="" />
 
     <item
         android:id="@+id/nav_search"
         android:icon="@drawable/searchnormal"
-    android:title="" />
+        android:title="" />
 
     <item
         android:id="@+id/nav_explore"
         android:icon="@drawable/icon"
-    android:title="" />
+        android:title="" />
 
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/user"
-    android:title="" />
+        android:title="" />
 </menu>

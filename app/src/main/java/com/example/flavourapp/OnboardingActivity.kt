@@ -19,10 +19,8 @@ class OnboardingActivity : AppCompatActivity() {
             insets
         }
 
-        // Tìm AppCompatButton bằng ID
         val button = findViewById<AppCompatButton>(R.id.button)
 
-        // Gán sự kiện click
         button.setOnClickListener {
             val intent = Intent(this, start::class.java)
             startActivity(intent)
