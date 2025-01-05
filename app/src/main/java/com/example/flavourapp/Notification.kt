@@ -20,9 +20,9 @@ class Notification : BaseActivity() {
 
         // Dữ liệu tĩnh
         val notifications = listOf(
-            NotificationItem("Quang Trung", "Đã thích bài viết của bạn", "5 phút trước"),
-            NotificationItem("Nguyễn Huệ", "Đã chia sẻ bài viết của bạn", "10 phút trước"),
-            NotificationItem("Châu Bùi", "Đã thích bài viết của bạn", "15 phút trước")
+            NotificationItem(R.drawable.avatar, "Quang Trung", "Đã thích bài viết của bạn", "5 phút trước"),
+            NotificationItem(R.drawable.avatar2, "Nguyễn Huệ", "Đã chia sẻ bài viết của bạn", "10 phút trước"),
+            NotificationItem(R.drawable.avatar, "Châu Bùi", "Đã thích bài viết của bạn", "15 phút trước")
         )
 
         // Thiết lập RecyclerView với View Binding

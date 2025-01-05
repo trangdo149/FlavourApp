@@ -30,11 +30,13 @@ class RecipeActivity : BaseActivity() {
         }
 
         val dishName = intent.getStringExtra("dishName")
+        val dishDescription = intent.getStringExtra("dishDescription")
         val ingredients = intent.getParcelableArrayListExtra<IngredientModel>("ingredients")
         val steps = intent.getParcelableArrayListExtra<StepsModel>("steps")
         val dishImage = intent.getIntExtra("dishImage", 0)
 
         binding.textView.text = dishName
+        binding.txtdescription.text = dishDescription
         binding.imageView.setImageResource(dishImage)
 
         if (!ingredients.isNullOrEmpty()) {
