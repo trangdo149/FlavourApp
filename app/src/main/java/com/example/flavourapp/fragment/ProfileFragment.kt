@@ -79,13 +79,11 @@ class ProfileFragment : Fragment() {
             )
 
             val favouriteList = listOf(
-                FavouriteItem("Kẹo Caramel"),
-                FavouriteItem("Cá Hồi"),
-                FavouriteItem("Bánh su kem"),
+                FavouriteItem("Cơm trộn"),
                 FavouriteItem("Panna cotta"),
                 FavouriteItem("Tiramisu"),
-                FavouriteItem("Bánh Croisant"),
-                FavouriteItem("Hí hí")
+                FavouriteItem("Croisant"),
+                FavouriteItem("Bún thang"),
             )
 
             // Set up adapter

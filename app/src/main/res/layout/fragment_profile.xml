@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Nguyễn Văn X"
+                android:text="Leanavab Huenning"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -99,7 +99,7 @@
                         android:id="@+id/txtFollowerCount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="12345"
+                        android:text="1234"
                         android:textColor="@color/green_600"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -178,8 +178,8 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chipGroup"
-                android:layout_width="373dp"
-                android:layout_height="99dp"
+                android:layout_width="350dp"
+                android:layout_height="97dp"
                 android:layout_gravity="center"
                 app:spanCount="3"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
