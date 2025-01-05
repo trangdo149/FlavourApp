@@ -13,6 +13,7 @@ enum class DishCategory {
 data class DishModel(
     val dishName: String,
     val dishImage: Int,
+    val dishDescription: String,
     val ingredients: List<IngredientModel>,
     val steps: List<StepsModel>,
     val category: DishCategory
