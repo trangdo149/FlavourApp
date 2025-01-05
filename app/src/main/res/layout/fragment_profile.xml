@@ -178,7 +178,7 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chipGroup"
-                android:layout_width="373dp"
+                android:layout_width="370dp"
                 android:layout_height="99dp"
                 android:layout_gravity="center"
                 app:spanCount="3"

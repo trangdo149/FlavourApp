@@ -6,5 +6,6 @@
     android:text="Cá hồi"
     android:textAlignment="center"
     app:chipCornerRadius="18dp"
+    app:chipBackgroundColor="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" />
