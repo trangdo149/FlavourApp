@@ -98,6 +98,7 @@ class HomeFragment : Fragment() {
             val intent = Intent(context, RecipeActivity::class.java).apply {
                 putExtra("dishName", selectedDish.dishName)
                 putExtra("dishImage", selectedDish.dishImage)
+                putExtra("dishDescription", selectedDish.dishDescription)
                 putParcelableArrayListExtra("ingredients", ArrayList(selectedDish.ingredients))
                 putParcelableArrayListExtra("steps", ArrayList(selectedDish.steps))
             }
