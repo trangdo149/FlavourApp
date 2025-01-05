@@ -195,7 +195,7 @@ class DishRepository {
             category = DishCategory.MON_NUOC
         ),
         DishModel(
-            dishName = "Mì bò đài loan",
+            dishName = "Mỳ bò đài loan",
             dishImage = R.drawable.dish_image_9,
             ingredients = listOf(
                 IngredientModel(R.drawable.ingredient_illus_6, "Tré", "2", "gói"),
@@ -286,7 +286,7 @@ class DishRepository {
             category = DishCategory.MON_CUON
         ),
         DishModel(
-            dishName = "Bò cuốn lá lốt",
+            dishName = "Bò lá lốt",
             dishImage = R.drawable.dish_image_13,
             ingredients = listOf(
                 IngredientModel(R.drawable.ingredient_illus_6, "Tré", "2", "gói"),
@@ -328,7 +328,7 @@ class DishRepository {
             category = DishCategory.MON_CUON
         ),
         DishModel(
-            dishName = "Nem nướng Nha Trang",
+            dishName = "Nem nướng",
             dishImage = R.drawable.dish_image_15,
             ingredients = listOf(
                 IngredientModel(R.drawable.ingredient_illus_6, "Tré", "2", "gói"),
