@@ -22,8 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="vertical"
-            android:paddingBottom="80dp">
+            android:orientation="vertical">
 
             <!-- Các thành phần bên trong ScrollView -->
             <TextView
@@ -52,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="Nguyễn Linh An"
+                android:text="Nguyễn Văn X"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -180,8 +179,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/chipGroup"
                 android:layout_width="373dp"
-                android:layout_height="43dp"
+                android:layout_height="99dp"
                 android:layout_gravity="center"
+                app:spanCount="3"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 tools:listitem="@layout/item_favourite" />
 
@@ -197,6 +197,8 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recipeRecyclerView"
                 android:layout_width="match_parent"
+                app:spanCount="2"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
