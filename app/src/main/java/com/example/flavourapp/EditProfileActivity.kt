@@ -29,7 +29,6 @@ class EditProfileActivity : BaseActivity() {
             binding.userEmail.text = it.email
 
             val userName = it.displayName
-            binding.userName.text = userName ?: "No name"
 
             val photoUrl = it.photoUrl
             photoUrl?.let { url ->

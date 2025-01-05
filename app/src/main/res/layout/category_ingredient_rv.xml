@@ -33,15 +33,19 @@
 
             <TextView
                 android:id="@+id/txtNameIngredient"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:layout_marginEnd="8dp"
                 android:fontFamily="@font/inter_medium"
-                android:text="Đậu gà"
+                android:text="\u0110ậu gà"
                 android:textColor="@color/green_800"
                 android:textSize="16dp"
+                android:maxLines="2"
+                android:ellipsize="end"
                 app:layout_constraintBottom_toBottomOf="@+id/imgDauGa"
                 app:layout_constraintStart_toEndOf="@+id/imgDauGa"
+                app:layout_constraintEnd_toStartOf="@+id/txtSoluong"
                 app:layout_constraintTop_toTopOf="@+id/imgDauGa" />
 
             <TextView
