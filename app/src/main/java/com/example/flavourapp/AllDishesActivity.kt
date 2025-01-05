@@ -45,7 +45,7 @@ class AllDishesActivity : AppCompatActivity() {
             Recipe("Tré trộn", "20 Min", "300 Kcal", R.drawable.dish_image_1),
             Recipe("Gà xé trộn rau răm", "40 Min", "300 Kcal", R.drawable.dish_image_2),
             Recipe("Phở trộn chay", "20 Min", "150 Kcal", R.drawable.dish_image_3),
-            Recipe("Rau quả trộn xốt", "20 Min", "100 Kcal", R.drawable.dish_image_4),
+            Recipe("Rau quả trộn sốt", "20 Min", "100 Kcal", R.drawable.dish_image_4),
             Recipe("Cơm trộn rong biển", "20 Min", "250 Kcal", R.drawable.dish_image_5),
             Recipe("Phở gà", "10 Min", "200 Kcal", R.drawable.dish_image_6),
             Recipe("Bún thang", "45 Min", "400 Kcal", R.drawable.dish_image_7),
@@ -73,6 +73,7 @@ class AllDishesActivity : AppCompatActivity() {
             val intent = Intent(this, RecipeActivity::class.java).apply {
                 putExtra("dishName", selectedDish.dishName)
                 putExtra("dishImage", selectedDish.dishImage)
+                putExtra("dishDescription", selectedDish.dishDescription)
                 putParcelableArrayListExtra("ingredients", ArrayList(selectedDish.ingredients))
                 putParcelableArrayListExtra("steps", ArrayList(selectedDish.steps))
             }
