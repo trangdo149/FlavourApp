@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 class NotificationAdapter(private val notifications: List<NotificationItem>) :
     RecyclerView.Adapter<NotificationAdapter.ViewHolder>() {
 
-    // Lớp ViewHolder
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imgAvatar: ImageView = itemView.findViewById(R.id.imgAvatar)
         val tvName: TextView = itemView.findViewById(R.id.tvName)
         val tvAction: TextView = itemView.findViewById(R.id.tvAction)
         val tvTime: TextView = itemView.findViewById(R.id.tvTime)
@@ -28,6 +28,7 @@ class NotificationAdapter(private val notifications: List<NotificationItem>) :
         holder.tvName.text = item.name
         holder.tvAction.text = item.action
         holder.tvTime.text = item.time
+        holder.imgAvatar.setImageResource(item.imageResource)  // Đặt ảnh đúng
     }
 
     override fun getItemCount(): Int = notifications.size

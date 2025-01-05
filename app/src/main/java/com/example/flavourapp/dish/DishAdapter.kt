@@ -34,6 +34,7 @@ class DishAdapter(
 
             // Truyền dữ liệu DishModel qua Intent
             intent.putExtra("dishName", dish.dishName)
+            intent.putExtra("dishDescription", dish.dishDescription)
             intent.putParcelableArrayListExtra("ingredients", ArrayList(dish.ingredients))
             intent.putParcelableArrayListExtra("steps", ArrayList(dish.steps))
             intent.putExtra("dishImage", dish.dishImage)

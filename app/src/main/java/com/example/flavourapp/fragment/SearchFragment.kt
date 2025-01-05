@@ -59,7 +59,6 @@ class SearchFragment : Fragment() {
                     val filteredDishes = dishRepository.getAllDishes()
                         .filter { it.dishName.startsWith(query, ignoreCase = true) }
                         .map { it.dishName }
-                    searchHistory.clear()
                     searchHistory.addAll(filteredDishes)
                 } else {
                     searchHistory.clear()

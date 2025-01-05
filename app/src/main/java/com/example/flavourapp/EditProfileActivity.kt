@@ -19,6 +19,11 @@ class EditProfileActivity : BaseActivity() {
         binding.backButton.setOnClickListener {
             finish()
         }
+        binding.notice.setOnClickListener {
+            val intent = Intent(this, Notification::class.java)
+            startActivity(intent)
+        }
+
         val user = FirebaseAuth.getInstance().currentUser
         user?.let {
             binding.userEmail.text = it.email
