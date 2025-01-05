@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "522075153986",
+    "project_id": "flavourapp-6af82",
+    "storage_bucket": "flavourapp-6af82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522075153986:android:8107095efeeead359fefdb",
+        "android_client_info": {
+          "package_name": "com.example.flavourapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "522075153986-rstp3g2hialpr5sf7gf7j4d8hkfa7aiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjtk1m4ox_PnO87wj6dp0I7WJyZix1GlY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "522075153986-rstp3g2hialpr5sf7gf7j4d8hkfa7aiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

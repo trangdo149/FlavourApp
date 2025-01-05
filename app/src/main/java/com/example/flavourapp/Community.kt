@@ -1,14 +1,19 @@
 package com.example.flavourapp
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.flavourapp.ComAdapter
+import com.example.flavourapp.Post
+import com.example.flavourapp.R
+import com.example.flavourapp.databinding.ActivityComBinding // Import lớp binding
 
 class Community : AppCompatActivity() {
+    private lateinit var binding: ActivityComBinding // Khai báo binding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_com)
+        binding = ActivityComBinding.inflate(layoutInflater)
+        setContentView(binding.root) // Gán layout qua binding
 
         // Dữ liệu tĩnh
         val posts = listOf(
@@ -44,9 +49,8 @@ class Community : AppCompatActivity() {
             )
         )
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = ComAdapter(posts)
-
+        // Sử dụng binding để truy cập RecyclerView
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.recyclerView.adapter = ComAdapter(posts)
     }
 }
