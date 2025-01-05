@@ -3,12 +3,11 @@ package com.example.flavourapp
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.flavourapp.IngredientAdapter.ViewHolder
-import com.example.flavourapp.databinding.CategoryIngredientRvBinding
 import com.example.flavourapp.databinding.CategoryStepsRvBinding
 
-class StepsAdapter(private val stepList: Array<StepsModel>):
-    RecyclerView.Adapter<StepsAdapter.ViewHolder>(){
+class StepsAdapter(private val stepList: List<StepsModel>) :
+    RecyclerView.Adapter<StepsAdapter.ViewHolder>() {
+
     class ViewHolder(private val binding: CategoryStepsRvBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(steps: StepsModel) {
             binding.txtStep.text = steps.NumberStep
@@ -25,6 +24,7 @@ class StepsAdapter(private val stepList: Array<StepsModel>):
         val steps = stepList[position]
         holder.bind(steps)
     }
+
     override fun getItemCount(): Int {
         return stepList.size
     }

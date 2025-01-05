@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <EditText
+        android:id="@+id/editTextSearch"
+        android:layout_width="300dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/searchview"
+        android:drawableStart="@drawable/search_normal"
+        android:ems="10"
+        android:focusable="true"
+        android:hint="  Tìm kiếm "
+        android:inputType="textFilter"
+        android:paddingStart="15dp"
+        android:textColorHint="#D5D6D2"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/rvDanhmuc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/iconBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconBack"
+        android:layout_width="35dp"
+        android:layout_height="31dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="0"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextSearch"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/arow_left" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDanhmuc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearch"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/card_recipe" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

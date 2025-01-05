@@ -14,7 +14,7 @@
         android:fontFamily="@font/inter_medium"
         android:text="Salad"
         android:textColor="@color/green_800"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/imgmuiten"
         tools:layout_editor_absoluteY="7dp"
         tools:ignore="MissingConstraints" />
