@@ -1,5 +1,5 @@
 package com.example.flavourapp.fragment
-
+import android.view.inputmethod.EditorInfo
 import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
@@ -50,23 +50,44 @@ class SearchFragment : Fragment() {
         }
         binding.recyclerViewHis.adapter = searchHistoryAdapter
         val dishRepository = DishRepository()
+
+        // Thêm sự kiện cho EditText khi nhấn phím Enter
+        binding.editTextSearch.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH) {
+                val query = v.text.toString().trim()
+                if (query.isNotEmpty()) {
+                    val selectedDish = dishRepository.getAllDishes().find { it.dishName.equals(query, ignoreCase = true) }
+                    if (selectedDish != null) {
+                        onDishClicked(selectedDish.dishName)  // Gọi hàm onDishClicked để hiển thị chi tiết món ăn
+                    } else {
+                        Toast.makeText(requireContext(), "Không tìm thấy thông tin món ăn!", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                true
+            } else {
+                false
+            }
+        }
+
         binding.editTextSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 val query = s.toString().trim()
                 if (query.isNotEmpty()) {
+                    // Lọc các món ăn có chứa từ khóa query
                     val filteredDishes = dishRepository.getAllDishes()
-                        .filter { it.dishName.startsWith(query, ignoreCase = true) }
+                        .filter { it.dishName.contains(query, ignoreCase = true) }
                         .map { it.dishName }
-                    searchHistory.addAll(filteredDishes)
-                } else {
-                    searchHistory.clear()
-                }
-                searchHistoryAdapter.notifyDataSetChanged()
-            }
 
-            override fun afterTextChanged(s: Editable?) {}
+                    searchHistory.clear() // Xóa lịch sử tìm kiếm trước đó
+                    searchHistory.addAll(filteredDishes) // Thêm các món ăn đã lọc
+                } else {
+                    searchHistory.clear() // Nếu không có từ khóa, xóa lịch sử tìm kiếm
+                }
+                searchHistoryAdapter.notifyDataSetChanged() // Cập nhật giao diện
+            }
+        override fun afterTextChanged(s: Editable?) {}
         })
     }
 
